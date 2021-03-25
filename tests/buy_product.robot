@@ -1,6 +1,8 @@
 *** Settings ***
 Resource  ../resources/steps/steps.robot
 
+Test Teardown  Close navigation
+
 *** Test Cases ***
 Buy a product
     Given that I access the shopping site

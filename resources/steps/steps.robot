@@ -1,12 +1,10 @@
 *** Settings ***
 Library  Selenium2Library
 
-Resource  ../resources/common.robot
-Resource  ../resources/pageobject/cart_page.robot
-Resource  ../resources/pageobject/home_page.robot
-Resource  ../resources/pageobject/item_page.robot
-
-Test Teardown  Close navigation
+Resource  ../common.robot
+Resource  ../pageobject/cart_page.robot
+Resource  ../pageobject/home_page.robot
+Resource  ../pageobject/item_page.robot
 
 *** Keywords ***
 Given that I access the shopping site
