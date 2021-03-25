@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.0 on win32)" generated="20210325 16:53:36.471" rpa="false">
+<suite id="s1" name="Buy Product" source="C:\Sourcecode\primecontrol-automation\tests\buy_product.robot">
+<test id="s1-t1" name="Buy a product">
+<kw name="Given that I access the shopping site" library="steps">
+<doc>Navegamos até a página inicial do site.</doc>
+<kw name="Navigate to the home page" library="home_page">
+<doc>Navegar até a página inicial do site.</doc>
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20210325 16:53:36.701" level="INFO">Opening browser 'Chrome' to base url 'http://automationpractice.com/index.php'.</msg>
+<status status="PASS" starttime="20210325 16:53:36.701" endtime="20210325 16:53:43.543"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210325 16:53:43.544" endtime="20210325 16:53:43.659"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${HOME_LOGO}</arg>
+</arguments>
+<status status="PASS" starttime="20210325 16:53:43.660" endtime="20210325 16:53:43.683"></status>
+</kw>
+<status status="PASS" starttime="20210325 16:53:36.701" endtime="20210325 16:53:43.683"></status>
+</kw>
+<status status="PASS" starttime="20210325 16:53:36.701" endtime="20210325 16:53:43.683"></status>
+</kw>
+<kw name="When I add a product to my cart" library="steps">
+<doc>Selecionamos um item e adicionamos ele ao carrinho.</doc>
+<kw name="Navigate to the item page" library="home_page">
+<doc>Navegar até a página do item que vamos comprar.</doc>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${ITEM}</arg>
+</arguments>
+<msg timestamp="20210325 16:53:43.684" level="INFO">Clicking element 'xpath=.//img[@title="Blouse"]'.</msg>
+<status status="PASS" starttime="20210325 16:53:43.684" endtime="20210325 16:53:45.686"></status>
+</kw>
+<status status="PASS" starttime="20210325 16:53:43.683" endtime="20210325 16:53:45.686"></status>
+</kw>
+<kw name="Add item to cart" library="item_page">
+<doc>Adicionando o item ao carrinho.</doc>
+<kw name="Click Button" library="Selenium2Library">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>${ADD_TO_CART_BTN}</arg>
+</arguments>
+<msg timestamp="20210325 16:53:45.687" level="INFO">Clicking button 'xpath=.//button[@name="Submit"]'.</msg>
+<status status="PASS" starttime="20210325 16:53:45.687" endtime="20210325 16:53:45.744"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20210325 16:53:46.745" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20210325 16:53:45.744" endtime="20210325 16:53:46.745"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${PROCEED_TO_CHECKOUT_BTN}</arg>
+</arguments>
+<status status="PASS" starttime="20210325 16:53:46.745" endtime="20210325 16:53:46.765"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${PROCEED_TO_CHECKOUT_BTN}</arg>
+</arguments>
+<msg timestamp="20210325 16:53:46.766" level="INFO">Clicking element 'xpath=.//a[@title="Proceed to checkout"]'.</msg>
+<status status="PASS" starttime="20210325 16:53:46.766" endtime="20210325 16:53:48.502"></status>
+</kw>
+<status status="PASS" starttime="20210325 16:53:45.686" endtime="20210325 16:53:48.502"></status>
+</kw>
+<status status="PASS" starttime="20210325 16:53:43.683" endtime="20210325 16:53:48.502"></status>
+</kw>
+<kw name="Then I must log in to complete the purchase" library="steps">
+<doc>Validamos se o produto foi para o carrinho.
+Realizamos login.
+Validamos o endereço de entrega.
+Aceitamos os termos de entrega.
+Selecionamos o método de pagamento e finalizamos a compra.</doc>
+<arguments>
+<arg>${EMAIL}</arg>
+<arg>${PASSWD}</arg>
+</arguments>
+<kw name="Validate product step" library="cart_page">
+<doc>Realizando a validação de que o carrinho contém o produto selecionado.</doc>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${CHECK_CART_PRODUCT}</arg>
+</arguments>
+<msg timestamp="20210325 16:53:48.528" level="INFO">Element 'xpath=.//span[text()="1 Product"]' is displayed.</msg>
+<status status="PASS" starttime="20210325 16:53:48.504" endtime="20210325 16:53:48.528"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${CHECK_CART_PRODUCT}</arg>
+</arguments>
+<msg timestamp="20210325 16:53:48.535" level="INFO">Current page contains element 'xpath=.//span[text()="1 Product"]'.</msg>
+<status status="PASS" starttime="20210325 16:53:48.529" endtime="20210325 16:53:48.535"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${STEP1_BTN}</arg>
+</arguments>
+<msg timestamp="20210325 16:53:48.535" level="INFO">Clicking element 'xpath=.//a[@href="http://automationpractice.com/index.php?controller=order&amp;step=1"]'.</msg>
+<status status="PASS" starttime="20210325 16:53:48.535" endtime="20210325 16:53:50.784"></status>
+</kw>
+<status status="PASS" starttime="20210325 16:53:48.503" endtime="20210325 16:53:50.784"></status>
+</kw>
+<kw name="Validate sign in step" library="cart_page">
+<doc>Realizar login para continuar a compra.</doc>
+<arguments>
+<arg>${EMAIL}</arg>
+<arg>${PASSWD}</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${EMAIL_FIELD}</arg>
+<arg>${EMAIL}</arg>
+</arguments>
+<msg timestamp="20210325 16:53:50.785" level="INFO">Typing text 'teste@teste.123' into text field 'xpath=.//input[@id="email"]'.</msg>
+<status status="PASS" starttime="20210325 16:53:50.785" endtime="20210325 16:53:50.866"></status>
+</kw>
+<kw name="Input Password" library="Selenium2Library">
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${PASSWD_FIELD}</arg>
+<arg>${PASSWD}</arg>
+</arguments>
+<msg timestamp="20210325 16:53:50.867" level="INFO">Typing password into text field 'xpath=.//input[@id="passwd"]'.</msg>
+<msg timestamp="20210325 16:53:50.901" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20210325 16:53:50.949" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20210325 16:53:50.866" endtime="20210325 16:53:50.950"></status>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>none</arg>
+<arg>RETURN</arg>
+</arguments>
+<msg timestamp="20210325 16:53:50.950" level="INFO">Sending key(s) ('RETURN',) to page.</msg>
+<msg timestamp="20210325 16:53:50.951" level="INFO">Pressing special key RETURN to browser.</msg>
+<msg timestamp="20210325 16:53:50.951" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20210325 16:53:50.950" endtime="20210325 16:53:52.161"></status>
+</kw>
+<status status="PASS" starttime="20210325 16:53:50.784" endtime="20210325 16:53:52.161"></status>
+</kw>
+<kw name="Validate address step" library="cart_page">
+<doc>Realizando validação do endereço.</doc>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${CHECK_ADDRESS}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210325 16:53:52.505" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210325 16:53:52.172" endtime="20210325 16:53:52.506"></status>
+</kw>
+<msg timestamp="20210325 16:53:52.508" level="FAIL">Element with locator 'xpath=.//li[text()="Los Angeles, California 90009"]' not found.</msg>
+<status status="FAIL" starttime="20210325 16:53:52.162" endtime="20210325 16:53:52.508"></status>
+</kw>
+<status status="FAIL" starttime="20210325 16:53:52.161" endtime="20210325 16:53:52.508"></status>
+</kw>
+<status status="FAIL" starttime="20210325 16:53:48.502" endtime="20210325 16:53:52.508"></status>
+</kw>
+<kw name="Close navigation" library="common" type="teardown">
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210325 16:53:52.509" endtime="20210325 16:53:54.642"></status>
+</kw>
+<status status="PASS" starttime="20210325 16:53:52.508" endtime="20210325 16:53:54.642"></status>
+</kw>
+<status status="FAIL" starttime="20210325 16:53:36.700" endtime="20210325 16:53:54.642" critical="yes">Element with locator 'xpath=.//li[text()="Los Angeles, California 90009"]' not found.</status>
+</test>
+<status status="FAIL" starttime="20210325 16:53:36.473" endtime="20210325 16:53:54.643"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" id="s1" name="Buy Product">Buy Product</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
