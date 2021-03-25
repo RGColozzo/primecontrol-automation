@@ -2,10 +2,10 @@
 ## Automation tests using Robot Framework & Selenium
 
 <p align="center">
- <a href="#Pré-Requisitos">Pré-Requisitos</a> • 
- <a href="#Configuração">Configuração</a> • 
- <a href="#Execução">Execução</a> • 
- <a href="#Autor">Autor</a>
+ <a href="#📑 Pré-Requisitos">📑 Pré-Requisitos</a> • 
+ <a href="#🛠 Configuração">🛠 Configuração</a> • 
+ <a href="#▶️ Execução">▶️ Execução</a> • 
+ <a href="#👤 Autor">👤 Autor</a>
 </p>
 
 ### 📑 Pré-Requisitos
