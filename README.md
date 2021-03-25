@@ -3,12 +3,12 @@
 
 <p align="center">
  <a href="#Pré-Requisitos">Pré-Requisitos</a> • 
- <a href="#InstalaçãoeConfiguração">Instalação e Configuração</a> • 
- <a href="#RodandoaAutomação">Rodando a Automação</a> • 
+ <a href="#Configuração">Configuração</a> • 
+ <a href="#Execução">Execução</a> • 
  <a href="#Autor">Autor</a>
 </p>
 
-### Pré-Requisitos
+### 📑 Pré-Requisitos
 ---
 
 Antes de começar, você vai precisar ter instalado em sua máquina as ferramentas abaixo:
@@ -25,7 +25,7 @@ $ git clone https://github.com/RGColozzo/primecontrol-automation.git
 
 Feito isso, agora podemos começar a instalar e configurar o 🤖 Robot Framework e a biblioteca do Selenium!
 
-### Instalação e Configuração
+### 🛠 Configuração
 ---
 
 ✅ *PASSO 1* - Abra seu Git Bash para instalar o Robot Framework e a biblioteca do Selenium (siga os comandos abaixo):
@@ -51,7 +51,7 @@ $ pip install robotframework-selenium2library
 
 Agora que temos tudo configurado, vamos rodar o script? Bora lá!
 
-### Rodando a Automação
+### ▶️ Execução
 ---
 
 Você deve ter percebido que dentro do repositório que você baixou existe uma pasta chamada "script" e dentro dela temos um arquivo chamado "exec.sh".
@@ -76,7 +76,7 @@ robot -d '..\results\NÃO OK\' -t 'Buy a product' -v EMAIL:$EMAIL_NOK -v PASSWD:
 
 Para executar, basta dar um duplo clique no arquivo **exec.sh**!
 
-### Autor
+### 👤 Autor
 ---
 
 Feito por [Rennan Gimenez](https://www.facebook.com/RennanGimenez)!
