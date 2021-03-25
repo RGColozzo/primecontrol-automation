@@ -7,7 +7,7 @@ EMAIL_NOK=teste@teste.123
 PASSWD_NOK=teste
 
 #Execução do cenário OK
-robot -d '..\results\' -t 'Buy a product' -v EMAIL:$EMAIL_OK -v PASSWD:$PASSWD_OK '..\tests\buy_product.robot'
+robot -d '..\results\OK\' -t 'Buy a product' -v EMAIL:$EMAIL_OK -v PASSWD:$PASSWD_OK '..\tests\buy_product.robot'
 
 #Execução do cenário não OK
-robot -d '..\results\' -t 'Buy a product' -v EMAIL:$EMAIL_NOK -v PASSWD:$PASSWD_NOK '..\tests\buy_product.robot'
+robot -d '..\results\NÃO OK\' -t 'Buy a product' -v EMAIL:$EMAIL_NOK -v PASSWD:$PASSWD_NOK '..\tests\buy_product.robot'
