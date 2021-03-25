@@ -3,8 +3,8 @@
 
 <p align="center">
  <a href="#Pré-Requisitos">Pré-Requisitos</a> • 
- <a href="#Instalação e Configuração">Instalação e Configuração</a> • 
- <a href="#Rodando a Automação">Rodando a Automação</a> • 
+ <a href="#InstalaçãoeConfiguração">Instalação e Configuração</a> • 
+ <a href="#RodandoaAutomação">Rodando a Automação</a> • 
  <a href="#Autor">Autor</a>
 </p>
 
